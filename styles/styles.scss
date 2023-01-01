@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 $primary-color: #5A42D5;
+$text-primary: #1D0693;
+
+div{
+    font-family: 'Poppins', sans-serif;
+}
 
 .mainLogin{
     display: flex;
@@ -6,13 +13,49 @@ $primary-color: #5A42D5;
 
 .leftLogin{
     width: 40%;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rightLogin{
     width: 60%;
     height: 100vh;
     background-color: $primary-color;
+}
+
+.formLogin{
+    width: 400px;
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.formLogin p{
+    font-size: 30px;
+    font-weight: 600;
+    color: $text-primary;
+}
+
+.formLogin input{
+    border: 3px solid $text-primary;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.formLogin button{
+    width: 100%;
+    height: 50px;
+    background-color: $text-primary;
+    border-width: 0px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {

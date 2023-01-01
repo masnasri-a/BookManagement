@@ -7,9 +7,10 @@ function index() {
         <div className="leftLogin">
             <div className="formLogin">
                 <p>Access your account!</p>
-                <p>Username</p>
+                <label>Username</label>
                 <input type="text" placeholder='Username' />
-                <p>Password</p>
+                <br />
+                <label>Password</label>
                 <input type="password" placeholder='Password' />
                 <button>Login</button>
             </div>
