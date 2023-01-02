@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["library.lol","libgen.is", "cdn.dribbble.com","panotbook.com","libgen.rocks","upload.wikimedia.org"],
+    domains: ["raw.githubusercontent.com","library.lol","libgen.is", "cdn.dribbble.com","panotbook.com","libgen.rocks","upload.wikimedia.org"],
   },
 };
 
