@@ -98,7 +98,7 @@ function Index() {
         </div>
         <div className="mid"></div>
         <div className="previewBook">
-          <Image src={images} height={300} width={200} alt="images" />
+          <Image src={images==""?"https://upload.wikimedia.org/wikipedia/id/thumb/5/5b/We_Bare_Bears-_The_Movie_poster.jpg/220px-We_Bare_Bears-_The_Movie_poster.jpg":images} height={300} width={200} alt="images" />
         </div>
       </div>
     </>

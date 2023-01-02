@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
-    domains: ["library.lol","libgen.is", "cdn.dribbble.com","panotbook.com"],
+    domains: ["library.lol","libgen.is", "cdn.dribbble.com","panotbook.com","libgen.rocks","upload.wikimedia.org"],
   },
 };
 

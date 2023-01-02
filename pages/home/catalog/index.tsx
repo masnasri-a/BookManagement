@@ -5,12 +5,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from "../component/card";
+import axios from "axios";
 
-function index() {
+function Index() {
   const menus = ["Catalog", "Shop", "Management", "Contact"];
+  const [books, setBooks] = useState([])
   const loops = [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 3, 1, 1, 1, 5, 5];
   const settings = {
-    slidesToShow: 6,
+    slidesToShow: 4,
     slidesToScroll: 3,
     dots: true,
     infinite: true,
@@ -20,6 +22,15 @@ function index() {
     autoplaySpeed: 2000,
     // fade: true,
   };
+  useEffect(()=>{
+    const loadListBook = async() =>{
+        await axios.get("https://qks0be.deta.dev/book/books/?page=1&limit=10").then((resp)=>{
+            setBooks(resp.data)
+            console.log(resp.data);
+        })
+    }
+    loadListBook()
+  },[])
 
   return (
     <>
@@ -33,10 +44,11 @@ function index() {
       </div>
       <div className="sliderCatalog">
         <Slider {...settings}>
-          {loops.map((detail: any, index: number) => {
+          {
+          books.map((detail: any, index: number) => {
             return (
               <div key={index}>
-                <Card title={detail}/>
+                <Card images={detail.imageKey} title={detail.title}/>
               </div>
             );
           })}
@@ -48,4 +60,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
