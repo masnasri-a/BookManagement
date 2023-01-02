@@ -9,8 +9,7 @@ function Header(props:any) {
     "Contact",
   ]);
   useEffect(() => {
-    console.log(contentData);
-    setContentData(props.data)
+    setContentData(props.data!);
   },[]);
 
 
@@ -20,7 +19,7 @@ function Header(props:any) {
         <div className="row">
           <div className="content col-5">
             {
-            props.data.map((detail: any, index:number) => {
+            contentData.map((detail: any, index:number) => {
               let classNames = "contentData";
               if (index == 0) {
                 classNames = "contentDataActive";

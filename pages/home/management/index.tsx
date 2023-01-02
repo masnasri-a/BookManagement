@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Header from "./../component/header";
 
-function index() {
+function Index() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [language, setLanguage] = useState("");
@@ -105,4 +105,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
